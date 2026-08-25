@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товар — Stroy Lux Material №1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (sessionStorage.getItem("sb7-authed") !== "true") {
+        window.location.replace("login.html");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="logo"
+          >Stroy Lux Material<span class="num">№1</span></a
+        >
+        <nav class="main-nav">
+          <a href="catalog.html" data-ru="Каталог" data-uz="Katalog">Каталог</a>
+          <a
+            href="index.html#delivery"
+            data-ru="Доставка и опт"
+            data-uz="Yetkazib berish va ulgurji"
+            >Доставка и опт</a
+          >
+          <a href="index.html#why" data-ru="Почему мы" data-uz="Nega aynan biz"
+            >Почему мы</a
+          >
+          <a href="index.html#contact" data-ru="Контакты" data-uz="Kontaktlar"
+            >Контакты</a
+          >
+        </nav>
+        <div class="header-right">
+          <span class="phone">+998-99-046-76-96</span>
+          <div class="icon-toggle" role="group" aria-label="Язык / Til">
+            <button id="langRu" class="active" data-lang-btn="ru">RU</button>
+            <button id="langUz" data-lang-btn="uz">UZ</button>
+          </div>
+          <button
+            class="theme-switch"
+            id="themeToggle"
+            aria-label="Переключить тему"
+          >
+            <span class="dot"></span>
+          </button>
+          <a href="cart.html" class="cart-link" aria-label="Корзина">
+            🛒
+            <span class="cart-badge" id="cartCount">0</span>
+          </a>
+          <div class="callback-wrap">
+            <button
+              class="btn btn-orange"
+              id="callbackBtn"
+              data-ru="Заказать звонок"
+              data-uz="Qo‘ng‘iroq buyurtma qilish"
+              aria-expanded="false"
+            >
+              Заказать звонок
+            </button>
+            <div class="callback-pop" id="callbackPop" role="dialog">
+              <span
+                class="callback-pop-label"
+                data-ru="Позвоните нам"
+                data-uz="Bizga qo‘ng‘iroq qiling"
+                >Позвоните нам</span
+              >
+              <a href="tel:+998712001707" class="callback-pop-number"
+                >+998-99-046-76-96</a
+              >
+              <button
+                class="callback-pop-copy"
+                id="callbackCopy"
+                data-ru="Скопировать номер"
+                data-uz="Raqamni nusxalash"
+              >
+                Скопировать номер
+              </button>
+            </div>
+          </div>
+          <button
+            class="burger"
+            id="burgerBtn"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="closeMenu" aria-label="Закрыть меню">
+        ×
+      </button>
+      <a href="catalog.html" data-ru="Каталог" data-uz="Katalog">Каталог</a>
+      <a
+        href="index.html#delivery"
+        data-ru="Доставка и опт"
+        data-uz="Yetkazib berish va ulgurji"
+        >Доставка и опт</a
+      >
+      <a href="index.html#why" data-ru="Почему мы" data-uz="Nega aynan biz"
+        >Почему мы</a
+      >
+      <a href="index.html#contact" data-ru="Контакты" data-uz="Kontaktlar"
+        >Контакты</a
+      >
+      <a
+        href="cart.html"
+        data-ru="Корзина"
+        data-uz="Savat"
+        style="color: var(--orange)"
+        >🛒 Корзина</a
+      >
+      <span class="phone" style="margin-top: 20px">+998-99-046-76-96</span>
+    </div>
+
+    <section style="padding: 40px 0 80px">
+      <div class="wrap">
+        <div id="productDetail">
+          <!-- Детали товара загружаются через JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <h4>Stroy-Lux-Material №1</h4>
+            <p
+              style="max-width: 280px"
+              data-ru="Склад строительных материалов полного цикла. Работаем с 2011 года."
+              data-uz="To‘liq tsikldagi qurilish materiallari ombori. 2011 yildan beri ishlaymiz."
+            >
+              Склад строительных материалов полного цикла. Работаем с 2011 года.
+            </p>
+          </div>
+          <div>
+            <h4 data-ru="Каталог" data-uz="Katalog">Каталог</h4>
+            <ul>
+              <li>
+                <a
+                  href="catalog.html?category=cement"
+                  data-ru="Цемент и смеси"
+                  data-uz="Sement va aralashmalar"
+                  >Цемент и смеси</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=brick"
+                  data-ru="Кирпич и блоки"
+                  data-uz="G‘isht va bloklar"
+                  >Кирпич и блоки</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=metal"
+                  data-ru="Металлопрокат"
+                  data-uz="Metalprokat"
+                  >Металлопрокат</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=insulation"
+                  data-ru="Изоляция и кровля"
+                  data-uz="Izolyatsiya va tom"
+                  >Изоляция и кровля</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-ru="Компания" data-uz="Kompaniya">Компания</h4>
+            <ul>
+              <li>
+                <a
+                  href="index.html#why"
+                  data-ru="Почему мы"
+                  data-uz="Nega aynan biz"
+                  >Почему мы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#delivery"
+                  data-ru="Доставка"
+                  data-uz="Yetkazib berish"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a href="index.html#delivery" data-ru="Опт" data-uz="Ulgurji"
+                  >Опт</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-ru="Контакты" data-uz="Kontaktlar">Контакты</h4>
+            <ul>
+              <li>+998-99-046-76-96</li>
+              <li>info@Stroy.Material.uz</li>
+              <li
+                data-ru="Ташкент, ул. Уста-Ширин, 114"
+                data-uz="Toshkent, Usta-Shirin ko‘chasi, 114"
+              >
+                Ташкент, ул. Уста-Ширин, 114
+              </li>
+              <li data-ru="Пн–Вс: 8:00–19:00" data-uz="Dush–Yak: 8:00–19:00">
+                Пн–Вс: 8:00–19:00
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Stroy Lux Material №1</span>
+          <span
+            data-ru="Все цены на сайте не являются публичной офертой"
+            data-uz="Saytdagi barcha narxlar ommaviy oferta emas"
+            >Все цены на сайте не являются публичной офертой</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход — Stroy Lux Material №1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (sessionStorage.getItem("sb7-authed") === "true") {
+        window.location.replace("index.html");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="auth-overlay">
+      <div class="auth-box">
+        <div class="auth-logo">
+          Stroy Lux Material<span class="num">№1</span>
+        </div>
+        <h2 class="auth-title" data-ru="Вход на сайт" data-uz="Saytga kirish">
+          Вход на сайт
+        </h2>
+        <p
+          class="auth-sub"
+          data-ru="Введите логин и пароль для доступа"
+          data-uz="Kirish uchun login va parolni kiriting"
+        >
+          Введите логин и пароль для доступа
+        </p>
+        <form id="authForm">
+          <label class="auth-field">
+            <span data-ru="Логин" data-uz="Login">Логин</span>
+            <input
+              type="text"
+              id="authLogin"
+              autocomplete="username"
+              required
+            />
+          </label>
+          <label class="auth-field">
+            <span data-ru="Пароль" data-uz="Parol">Пароль</span>
+            <input
+              type="password"
+              id="authPass"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <p
+            class="auth-error"
+            id="authError"
+            data-ru="Неверный логин или пароль"
+            data-uz="Login yoki parol noto‘g‘ri"
+          >
+            Неверный логин или пароль
+          </p>
+          <button
+            type="submit"
+            class="btn btn-orange auth-submit"
+            data-ru="Войти"
+            data-uz="Kirish"
+          >
+            Войти
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

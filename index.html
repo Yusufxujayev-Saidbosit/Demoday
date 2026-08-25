@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stroy Lux Material №1 — строительные материалы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      if (sessionStorage.getItem("sb7-authed") !== "true") {
+        window.location.replace("login.html");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="logo"
+          >Stroy Lux Material<span class="num">№1</span></a
+        >
+        <nav class="main-nav">
+          <a href="catalog.html" data-ru="Каталог" data-uz="Katalog">Каталог</a>
+          <a
+            href="#delivery"
+            data-ru="Доставка и опт"
+            data-uz="Yetkazib berish va ulgurji"
+            >Доставка и опт</a
+          >
+          <a href="#why" data-ru="Почему мы" data-uz="Nega aynan biz"
+            >Почему мы</a
+          >
+          <a href="#contact" data-ru="Контакты" data-uz="Kontaktlar"
+            >Контакты</a
+          >
+        </nav>
+        <div class="header-right">
+          <span class="phone">+998-99-046-76-96</span>
+          <div class="icon-toggle" role="group" aria-label="Язык / Til">
+            <button id="langRu" class="active" data-lang-btn="ru">RU</button>
+            <button id="langUz" data-lang-btn="uz">UZ</button>
+          </div>
+          <button
+            class="theme-switch"
+            id="themeToggle"
+            aria-label="Переключить тему"
+          >
+            <span class="dot"></span>
+          </button>
+          <a href="cart.html" class="cart-link" aria-label="Корзина">
+            🛒
+            <span class="cart-badge" id="cartCount">0</span>
+          </a>
+          <div class="callback-wrap">
+            <button
+              class="btn btn-orange"
+              id="callbackBtn"
+              data-ru="Заказать звонок"
+              data-uz="Qo‘ng‘iroq buyurtma qilish"
+              aria-expanded="false"
+            >
+              Заказать звонок
+            </button>
+            <div class="callback-pop" id="callbackPop" role="dialog">
+              <span
+                class="callback-pop-label"
+                data-ru="Позвоните нам"
+                data-uz="Bizga qo‘ng‘iroq qiling"
+                >Позвоните нам</span
+              >
+              <a href="tel:+998712001707" class="callback-pop-number"
+                >+998-99-046-76-96</a
+              >
+              <button
+                class="callback-pop-copy"
+                id="callbackCopy"
+                data-ru="Скопировать номер"
+                data-uz="Raqamni nusxalash"
+              >
+                Скопировать номер
+              </button>
+            </div>
+          </div>
+          <button
+            class="burger"
+            id="burgerBtn"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="closeMenu" aria-label="Закрыть меню">
+        ×
+      </button>
+      <a href="catalog.html" data-ru="Каталог" data-uz="Katalog">Каталог</a>
+      <a
+        href="#delivery"
+        data-ru="Доставка и опт"
+        data-uz="Yetkazib berish va ulgurji"
+        >Доставка и опт</a
+      >
+      <a href="#why" data-ru="Почему мы" data-uz="Nega aynan biz">Почему мы</a>
+      <a href="#contact" data-ru="Контакты" data-uz="Kontaktlar">Контакты</a>
+      <a
+        href="cart.html"
+        data-ru="Корзина"
+        data-uz="Savat"
+        style="color: var(--orange)"
+        >🛒 Корзина</a
+      >
+      <span class="phone" style="margin-top: 20px">+998-99-046-76-96</span>
+    </div>
+
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span
+            class="eyebrow"
+            data-ru="Склад площадью 4 200 м²"
+            data-uz="4 200 m² ombor maydoni"
+            >Склад площадью 4 200 м²</span
+          >
+          <h1
+            data-ru="От фундамента до крыши — всё в одном месте"
+            data-uz="Fundamentdan tomgacha — barchasi bir joyda"
+          >
+            От фундамента<br />до <span>крыши</span> —<br />всё в одном месте
+          </h1>
+          <p
+            class="lead"
+            data-ru="Цемент, кирпич, металлопрокат, теплоизоляция и кровля. Отгружаем со склада в день заказа, привозим на объект сами."
+            data-uz="Sement, g‘isht, metalprokat, issiqlik izolyatsiyasi va tom yopish materiallari. Buyurtma kunidayoq omborimizdan jo‘natamiz, obyektga o‘zimiz olib boramiz."
+          >
+            Цемент, кирпич, металлопрокат, теплоизоляция и кровля. Отгружаем со
+            склада в день заказа, привозим на объект сами.
+          </p>
+          <div class="hero-ctas">
+            <a
+              href="catalog.html"
+              class="btn btn-orange"
+              data-ru="Смотреть каталог"
+              data-uz="Katalogni ko‘rish"
+              >Смотреть каталог</a
+            >
+            <button
+              class="btn btn-outline"
+              onclick="openWholesaleModal()"
+              data-ru="Оптовым клиентам"
+              data-uz="Ulgurji mijozlar uchun"
+            >
+              Оптовым клиентам
+            </button>
+          </div>
+        </div>
+        <div class="wall-cut" aria-hidden="true">
+          <div class="layer l1">
+            <span data-ru="кирпич" data-uz="g‘isht">кирпич</span
+            ><span class="tag">250×120×65</span>
+          </div>
+          <div class="layer l2">
+            <span data-ru="арматура" data-uz="armatura">арматура</span
+            ><span class="tag">Ø12 А500</span>
+          </div>
+          <div class="layer l3">
+            <span data-ru="кладочный раствор" data-uz="devor eritmasi"
+              >кладочный раствор</span
+            ><span class="tag">М150</span>
+          </div>
+          <div class="layer l4">
+            <span data-ru="утеплитель" data-uz="issiqlik izolyatori"
+              >утеплитель</span
+            ><span class="tag">100мм</span>
+          </div>
+          <div class="layer l5">
+            <span data-ru="блок газобетон" data-uz="gazobeton blok"
+              >блок газобетон</span
+            ><span class="tag">D500</span>
+          </div>
+          <div class="layer l6">
+            <span data-ru="гидроизоляция" data-uz="gidroizolyatsiya"
+              >гидроизоляция</span
+            ><span class="tag">2 слоя</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div class="wrap">
+          <div class="stat">
+            <b>12</b
+            ><small data-ru="лет на рынке" data-uz="yildan buyon bozorda"
+              >лет на рынке</small
+            >
+          </div>
+          <div class="stat">
+            <b>3 800+</b
+            ><small data-ru="позиций на складе" data-uz="ombordagi mahsulotlar"
+              >позиций на складе</small
+            >
+          </div>
+          <div class="stat">
+            <b>90 min</b
+            ><small
+              data-ru="доставка по городу"
+              data-uz="shahar bo‘ylab yetkazish"
+              >доставка по городу</small
+            >
+          </div>
+          <div class="stat">
+            <b>620+</b
+            ><small
+              data-ru="строительных бригад-клиентов"
+              data-uz="qurilish brigadalari-mijozlar"
+              >строительных бригад-клиентов</small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="tag-eyebrow" data-ru="Каталог" data-uz="Katalog"
+              >Каталог</span
+            >
+            <h2 data-ru="Популярные категории" data-uz="Ommabop kategoriyalar">
+              Популярные категории
+            </h2>
+          </div>
+          <p
+            data-ru="Полный ассортимент под ключ — от чернового этапа до отделки. Перейдите в каталог, чтобы посмотреть все товары."
+            data-uz="Qora ishlardan pardozlashgacha to‘liq assortiment. Barcha mahsulotlarni ko‘rish uchun katalogga o‘ting."
+          >
+            Полный ассортимент под ключ — от чернового этапа до отделки.
+            Перейдите в каталог, чтобы посмотреть все товары.
+          </p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="catalog-grid">
+          <!-- ЦЕМЕНТ -->
+          <a href="catalog.html?category=cement" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://www.rusgvozdi.ru/upload/iblock/d25/d25d265670f5e141f22d682dcb418da4.jpg"
+              alt="Цемент и сухие смеси"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">Ц</div>
+              <h3
+                data-ru="Цемент и сухие смеси"
+                data-uz="Sement va quruq aralashmalar"
+              >
+                Цемент и сухие смеси
+              </h3>
+              <p
+                data-ru="Портландцемент М400/М500, кладочные и штукатурные смеси, наливные полы."
+                data-uz="Portlandsement M400/M500, devor va shtukaturka aralashmalari, quyma pollar."
+              >
+                Портландцемент М400/М500, кладочные и штукатурные смеси,
+                наливные полы.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 48 000 сум<span data-ru="мешок 50 кг" data-uz="qop 50 kg"
+                    >мешок 50 кг</span
+                  >
+                </div>
+                <div class="cat-stock" data-ru="в наличии" data-uz="mavjud">
+                  в наличии
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- КИРПИЧ -->
+          <a href="catalog.html?category=brick" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_I0RfsgnRJV9Q3FQCOxtQNUfwwz_owYqvKwt12B5Cw&s=10"
+              alt="Кирпич и блоки"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">К</div>
+              <h3 data-ru="Кирпич и блоки" data-uz="G‘isht va bloklar">
+                Кирпич и блоки
+              </h3>
+              <p
+                data-ru="Керамический, силикатный кирпич, газобетонные и керамзитобетонные блоки."
+                data-uz="Keramik, silikat g‘isht, gazobeton va keramzitbeton bloklar."
+              >
+                Керамический, силикатный кирпич, газобетонные и
+                керамзитобетонные блоки.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 1 100 сум<span data-ru="за штуку" data-uz="dona uchun"
+                    >за штуку</span
+                  >
+                </div>
+                <div class="cat-stock" data-ru="в наличии" data-uz="mavjud">
+                  в наличии
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- МЕТАЛЛ -->
+          <a href="catalog.html?category=metal" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4Ai5zNWc7o-OQzCG8efNDVrwHysJhwdL2merxodbTRnUVwxBI2PNHGzq&s=10"
+              alt="Металлопрокат"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">М</div>
+              <h3 data-ru="Металлопрокат" data-uz="Metalprokat">
+                Металлопрокат
+              </h3>
+              <p
+                data-ru="Арматура, профильная труба, сетка кладочная, уголок, швеллер."
+                data-uz="Armatura, profil quvur, devor to‘ri, burchak, shveller."
+              >
+                Арматура, профильная труба, сетка кладочная, уголок, швеллер.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 12 400 сум<span data-ru="за метр" data-uz="metr uchun"
+                    >за метр</span
+                  >
+                </div>
+                <div
+                  class="cat-stock"
+                  data-ru="под заказ 2–3 дня"
+                  data-uz="buyurtma bo‘yicha 2–3 kun"
+                >
+                  под заказ 2–3 дня
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- ИЗОЛЯЦИЯ -->
+          <a href="catalog.html?category=insulation" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHar92B1mbf5e-ORGJ0NvB1b09ivZOLpJpj2SUQvcOA&s=10"
+              alt="Изоляция"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">И</div>
+              <h3 data-ru="Изоляция" data-uz="Izolyatsiya">Изоляция</h3>
+              <p
+                data-ru="Минвата, пенополистирол, гидро- и пароизоляционные плёнки, герметики."
+                data-uz="Mineral paxta, penopolistirol, gidro- va bug‘ izolyatsiya pardalari, germetiklar."
+              >
+                Минвата, пенополистирол, гидро- и пароизоляционные плёнки,
+                герметики.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 61 000 сум<span data-ru="за м²" data-uz="m² uchun"
+                    >за м²</span
+                  >
+                </div>
+                <div class="cat-stock" data-ru="в наличии" data-uz="mavjud">
+                  в наличии
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- КРОВЛЯ -->
+          <a href="catalog.html?category=roofing" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://razvitiee.com/upload/iblock/632/63272ade96f7e8d0dce53652ea7147e3.png"
+              alt="Кровля и водосток"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">Р</div>
+              <h3
+                data-ru="Кровля и водосток"
+                data-uz="Tom yopish va suv oqizish"
+              >
+                Кровля и водосток
+              </h3>
+              <p
+                data-ru="Металлочерепица, профлист, ондулин, водосточные системы и комплектующие."
+                data-uz="Metalcherepitsa, profnastil, ondulin, suv oqizish tizimlari va aksessuarlar."
+              >
+                Металлочерепица, профлист, ондулин, водосточные системы и
+                комплектующие.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 84 000 сум<span data-ru="за м²" data-uz="m² uchun"
+                    >за м²</span
+                  >
+                </div>
+                <div class="cat-stock" data-ru="в наличии" data-uz="mavjud">
+                  в наличии
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- ИНСТРУМЕНТ -->
+          <a href="catalog.html?category=tools" class="cat-card">
+            <img
+              class="cat-img"
+              src="https://img01.flagma.uz/photo/instrumenty-v-assortimente-1781860_big.jpg"
+              alt="Инструмент и крепёж"
+              loading="lazy"
+            />
+            <div class="cat-body">
+              <div class="cat-icon">Т</div>
+              <h3
+                data-ru="Инструмент и крепёж"
+                data-uz="Asbob va mahkamlagichlar"
+              >
+                Инструмент и крепёж
+              </h3>
+              <p
+                data-ru="Ручной и электроинструмент в аренду и на продажу, саморезы, дюбели, анкеры."
+                data-uz="Qo‘l va elektr asboblari ijaraga va sotuvga, o‘zi kesuvchi vintlar, dyubellar, ankerlar."
+              >
+                Ручной и электроинструмент в аренду и на продажу, саморезы,
+                дюбели, анкеры.
+              </p>
+              <div class="cat-meta">
+                <div class="cat-price">
+                  от 3 500 сум<span data-ru="за единицу" data-uz="dona uchun"
+                    >за единицу</span
+                  >
+                </div>
+                <div class="cat-stock" data-ru="в наличии" data-uz="mavjud">
+                  в наличии
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span
+              class="tag-eyebrow"
+              data-ru="Почему мы"
+              data-uz="Nega aynan biz"
+              >Почему мы</span
+            >
+            <h2
+              data-ru="Работаем как склад, а не как магазин"
+              data-uz="Do‘kon emas, ombor sifatida ishlaymiz"
+            >
+              Работаем как склад, а не как магазин
+            </h2>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="idx" data-ru="01 / погрузка" data-uz="01 / yuklash">
+              01 / погрузка
+            </div>
+            <h3
+              data-ru="Своя погрузочная техника"
+              data-uz="O‘z yuklash texnikamiz"
+            >
+              Своя погрузочная техника
+            </h3>
+            <p
+              data-ru="Кран-манипулятор и погрузчик на территории — без ожидания и ручной перекидки."
+              data-uz="Hududda kran-manipulyator va yuklagich — kutish va qo‘lda ortish shart emas."
+            >
+              Кран-манипулятор и погрузчик на территории — без ожидания и ручной
+              перекидки.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="idx" data-ru="02 / расчёт" data-uz="02 / hisob-kitob">
+              02 / расчёт
+            </div>
+            <h3
+              data-ru="Расчёт материала по чертежу"
+              data-uz="Chizma bo‘yicha material hisobi"
+            >
+              Расчёт материала по чертежу
+            </h3>
+            <p
+              data-ru="Пришлите план — прораб посчитает объём цемента, кирпича и арматуры бесплатно."
+              data-uz="Rejani yuboring — prorab sement, g‘isht va armatura hajmini bepul hisoblab beradi."
+            >
+              Пришлите план — прораб посчитает объём цемента, кирпича и арматуры
+              бесплатно.
+            </p>
+          </div>
+          <div class="why-item">
+            <div
+              class="idx"
+              data-ru="03 / доставка"
+              data-uz="03 / yetkazib berish"
+            >
+              03 / доставка
+            </div>
+            <h3
+              data-ru="Доставка в день заказа"
+              data-uz="Buyurtma kunida yetkazib berish"
+            >
+              Доставка в день заказа
+            </h3>
+            <p
+              data-ru="Собственный автопарк, включая борт с манипулятором для длинномера."
+              data-uz="Uzun yuklar uchun manipulyatorli mashinalarni o‘z ichiga olgan avtoparkimiz bor."
+            >
+              Собственный автопарк, включая борт с манипулятором для длинномера.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="idx" data-ru="04 / возврат" data-uz="04 / qaytarish">
+              04 / возврат
+            </div>
+            <h3
+              data-ru="Возврат неиспользованного"
+              data-uz="Ishlatilmagan materialni qaytarish"
+            >
+              Возврат неиспользованного
+            </h3>
+            <p
+              data-ru="Излишки материала принимаем обратно в течение 14 дней при сохранной упаковке."
+              data-uz="Ortiqcha materialni 14 kun ichida, qadoq saqlangan holda qaytarib olamiz."
+            >
+              Излишки материала принимаем обратно в течение 14 дней при
+              сохранной упаковке.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <div class="wrap">
+        <div class="split">
+          <div class="split-panel">
+            <h3 data-ru="Доставка" data-uz="Yetkazib berish">Доставка</h3>
+            <p
+              data-ru="Развозим по городу и области ежедневно, включая выходные."
+              data-uz="Shahar va viloyat bo‘ylab har kuni, dam olish kunlari ham yetkazamiz."
+            >
+              Развозим по городу и области ежедневно, включая выходные.
+            </p>
+            <ul class="check-list">
+              <li
+                data-ru="По городу — от 90 минут"
+                data-uz="Shahar bo‘ylab — 90 daqiqadan"
+              >
+                По городу — от 90 минут
+              </li>
+              <li
+                data-ru="Разгрузка манипулятором без доплаты"
+                data-uz="Manipulyator bilan tushirish qo‘shimcha to‘lovsiz"
+              >
+                Разгрузка манипулятором без доплаты
+              </li>
+              <li
+                data-ru="Отслеживание машины по звонку диспетчера"
+                data-uz="Dispetcher qo‘ng‘irog‘i orqali mashinani kuzatish"
+              >
+                Отслеживание машины по звонку диспетчера
+              </li>
+            </ul>
+          </div>
+          <div class="split-panel orange">
+            <h3 data-ru="Оптовым клиентам" data-uz="Ulgurji mijozlar uchun">
+              Оптовым клиентам
+            </h3>
+            <p
+              data-ru="Специальные условия для бригад, подрядчиков и застройщиков."
+              data-uz="Brigadalar, pudratchilar va quruvchilar uchun maxsus shartlar."
+            >
+              Специальные условия для бригад, подрядчиков и застройщиков.
+            </p>
+            <ul class="check-list">
+              <li
+                data-ru="Гибкая система скидок от объёма"
+                data-uz="Hajmga qarab moslashuvchan chegirmalar"
+              >
+                Гибкая система скидок от объёма
+              </li>
+              <li
+                data-ru="Отсрочка платежа для постоянных партнёров"
+                data-uz="Doimiy hamkorlar uchun to‘lovni kechiktirish"
+              >
+                Отсрочка платежа для постоянных партнёров
+              </li>
+              <li
+                data-ru="Персональный менеджер и резерв на складе"
+                data-uz="Shaxsiy menejer va omborda zaxira"
+              >
+                Персональный менеджер и резерв на складе
+              </li>
+            </ul>
+            <button
+              class="btn btn-orange"
+              style="margin-top: 20px; background: #fff; color: var(--orange)"
+              onclick="openWholesaleModal()"
+              data-ru="Стать оптовым клиентом"
+              data-uz="Ulgurji mijoz bo'lish"
+            >
+              Стать оптовым клиентом
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="contact">
+      <h2
+        data-ru="Нужна консультация по материалам?"
+        data-uz="Materiallar bo‘yicha maslahat kerakmi?"
+      >
+        Нужна консультация по материалам?
+      </h2>
+      <p
+        data-ru="Оставьте номер — прораб перезвонит в течение 15 минут и поможет с расчётом."
+        data-uz="Raqamingizni qoldiring — prorab 15 daqiqa ichida qo‘ng‘iroq qilib, hisob-kitobda yordam beradi."
+      >
+        Оставьте номер — прораб перезвонит в течение 15 минут и поможет с
+        расчётом.
+      </p>
+      <button
+        class="btn btn-orange"
+        onclick="openRequestModal()"
+        data-ru="Оставить заявку"
+        data-uz="Ariza qoldirish"
+      >
+        Оставить заявку
+      </button>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <h4>Stroy-Lux-Material №1</h4>
+            <p
+              style="max-width: 280px"
+              data-ru="Склад строительных материалов полного цикла. Работаем с 2011 года."
+              data-uz="To‘liq tsikldagi qurilish materiallari ombori. 2011 yildan beri ishlaymiz."
+            >
+              Склад строительных материалов полного цикла. Работаем с 2011 года.
+            </p>
+          </div>
+          <div>
+            <h4 data-ru="Каталог" data-uz="Katalog">Каталог</h4>
+            <ul>
+              <li>
+                <a
+                  href="catalog.html?category=cement"
+                  data-ru="Цемент и смеси"
+                  data-uz="Sement va aralashmalar"
+                  >Цемент и смеси</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=brick"
+                  data-ru="Кирпич и блоки"
+                  data-uz="G‘isht va bloklar"
+                  >Кирпич и блоки</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=metal"
+                  data-ru="Металлопрокат"
+                  data-uz="Metalprokat"
+                  >Металлопрокат</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=insulation"
+                  data-ru="Изоляция и кровля"
+                  data-uz="Izolyatsiya va tom"
+                  >Изоляция и кровля</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-ru="Компания" data-uz="Kompaniya">Компания</h4>
+            <ul>
+              <li>
+                <a href="#why" data-ru="Почему мы" data-uz="Nega aynan biz"
+                  >Почему мы</a
+                >
+              </li>
+              <li>
+                <a href="#delivery" data-ru="Доставка" data-uz="Yetkazib berish"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a href="#delivery" data-ru="Опт" data-uz="Ulgurji">Опт</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-ru="Контакты" data-uz="Kontaktlar">Контакты</h4>
+            <ul>
+              <li>+998-99-046-76-96</li>
+              <li>info@Stroy.Material.uz</li>
+              <li
+                data-ru="Ташкент, ул. Уста-Ширин, 114"
+                data-uz="Toshkent, Usta-Shirin ko‘chasi, 114"
+              >
+                Ташкент, ул. Уста-Ширин, 114
+              </li>
+              <li data-ru="Пн–Вс: 8:00–19:00" data-uz="Dush–Yak: 8:00–19:00">
+                Пн–Вс: 8:00–19:00
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Stroy Lux Material №1</span>
+          <span
+            data-ru="Все цены на сайте не являются публичной офертой"
+            data-uz="Saytdagi barcha narxlar ommaviy oferta emas"
+            >Все цены на сайте не являются публичной офертой</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Модальное окно для заявки -->
+    <div class="modal-overlay" id="requestModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('requestModal')">
+          ×
+        </button>
+        <h2 data-ru="Оставить заявку" data-uz="Ariza qoldirish">
+          📋 Оставить заявку
+        </h2>
+        <p
+          data-ru="Заполните форму и наш менеджер свяжется с вами"
+          data-uz="Formani to'ldiring va menejerimiz siz bilan bog'lanadi"
+        >
+          Заполните форму и наш менеджер свяжется с вами
+        </p>
+        <form id="requestForm" onsubmit="submitRequest(event)">
+          <div class="modal-field">
+            <label data-ru="Ваше имя" data-uz="Ismingiz">Ваше имя</label>
+            <input
+              type="text"
+              id="requestName"
+              placeholder="Саидбосит"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label data-ru="Номер телефона" data-uz="Telefon raqam"
+              >Номер телефона</label
+            >
+            <input
+              type="tel"
+              id="requestPhone"
+              placeholder="+998-99-123-45-67"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label data-ru="Комментарий" data-uz="Izoh">Комментарий</label>
+            <textarea
+              id="requestComment"
+              rows="3"
+              placeholder="Что вас интересует?"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-orange"
+            style="width: 100%"
+            data-ru="Отправить заявку"
+            data-uz="Arizani yuborish"
+          >
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Модальное окно для оптовиков -->
+    <div class="modal-overlay" id="wholesaleModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('wholesaleModal')">
+          ×
+        </button>
+        <h2 data-ru="Стать оптовым клиентом" data-uz="Ulgurji mijoz bo'lish">
+          🏢 Стать оптовым клиентом
+        </h2>
+        <p
+          data-ru="Заполните форму и получите специальные условия"
+          data-uz="Formani to'ldiring va maxsus shartlarni oling"
+        >
+          Заполните форму и получите специальные условия
+        </p>
+        <form id="wholesaleForm" onsubmit="submitWholesale(event)">
+          <div class="modal-field">
+            <label data-ru="Название компании" data-uz="Kompaniya nomi"
+              >Название компании</label
+            >
+            <input
+              type="text"
+              id="wholesaleCompany"
+              placeholder="ООО 'Строй-Инвест'"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label data-ru="Ваше имя" data-uz="Ismingiz">Ваше имя</label>
+            <input
+              type="text"
+              id="wholesaleName"
+              placeholder="Саидбосит"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label data-ru="Номер телефона" data-uz="Telefon raqam"
+              >Номер телефона</label
+            >
+            <input
+              type="tel"
+              id="wholesalePhone"
+              placeholder="+998-99-123-45-67"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label
+              data-ru="Примерный объём закупок"
+              data-uz="Taxminiy xarid hajmi"
+              >Примерный объём закупок</label
+            >
+            <select id="wholesaleVolume">
+              <option value="До 10 млн сум/мес">До 10 млн сум/мес</option>
+              <option value="10-50 млн сум/мес">10-50 млн сум/мес</option>
+              <option value="50-200 млн сум/мес">50-200 млн сум/мес</option>
+              <option value="Более 200 млн сум/мес">
+                Более 200 млн сум/мес
+              </option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-orange"
+            style="width: 100%"
+            data-ru="Отправить заявку"
+            data-uz="Arizani yuborish"
+          >
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
